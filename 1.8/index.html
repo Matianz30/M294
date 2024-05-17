@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Good Message</title>
+    <script>
+       function guess() {
+           let secret = Math.floor(Math.random() * 100)
+
+           let gues;
+           let tries = 0;
+           while (guess != secret) {
+               guess = Number(prompt("guess number between 0 - 100: "))
+               tries++;
+
+               if (guess == secret) {
+                   alert(`You win after ${tries} tries!`)
+               } else if (guess > secret) {
+                   alert("Your too high")
+               } else if(guess < secret) {
+                   alert("Your too low")
+               }
+           }
+       }
+    </script>
+</head>
+<body>
+<button onclick="guess()">guess number</button>
+</body>
+</html>
